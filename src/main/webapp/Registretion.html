@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration</title>
+ <link rel="stylesheet" type="text/css" href="signup.css">
+</head>
+<body>
+	<!-- the action "SignupServlet" is  URL pattern of SignupServlet this URL pattern registred in web.xml -->
+ 	<!-- the SignupServlet was extend by httpServlet so in that we can use olny "doget" or "dopost"  methods 
+ 	       (if the method is dopost in SignupServlet here method="post" or "doget" method="get") -->
+    <h1>Signup Form</h1>
+    <form id="signupForm" action="SignupServlet" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+        
+        <div style="display: flex;">
+			<span>Gender:</span>
+	        <input type="radio" id="male" name="gender" value="male">
+	        <span>Male</span>
+	        <input type="radio" id="female" name="gender" value="female">
+	        <span for="Female" >Female</span>
+		</div><br>
+		<div style="display: flex;">
+			<span>Country  .</span>
+			<select id="country" name="country">
+				<option value="usa">USA</option>
+				<option value="india">INDIA</option>
+				<option value="china">CHINA</option>
+			</select>
+		</div><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" maxlength="10" required><br>
+		
+		<label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+
+		<label for="c_pass">Conform Password:</label>
+        <input type="password" id="c_pass" name="c_pass" required><br><br>
+        
+        <input type="submit" value="Sign Up">
+    </form>
+
+</body>
+</html>

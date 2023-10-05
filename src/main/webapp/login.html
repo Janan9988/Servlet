@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form</title>
+    <link rel="stylesheet" type="text/css" href="login.css">
+    
+</head>
+<body>
+	
+ <h2>Login</h2>
+ 	<!-- the action "login" is  URL pattern of LoginServlet this URL pattern registred in web.xml -->
+ 	<!-- the LoginServlet was extend by httpServlet so in that we can use olny "doget" or "dopost"  methods 
+ 	        (if the method is dopost in LoginServlet here method="post" or "doget" method="get") -->
+    <form action="login" method="post">
+    
+        <label for="username">Username or Email:</label>
+        <input type="text" id="username" name="u_name" required>
+        <br>
+		<!-- the type password hide the password like ******** -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <br>
+        
+        <input type="submit" value="Login"><br><br>
+        
+        <div >
+		<!-- this is a button, if user dont have username, password it will redirect to registratin page -->
+		<span>Don't have account</span>
+		<a href="Registretion.html"><button type="button" >Register</button></a>
+		</div>
+    </form>
+    
+</body>
+</html>
